@@ -303,9 +303,25 @@ const {
 console.log(bookRating);
 
 //2.6
-const printBookInfo = function({title, author, year = 'year unknown'}) {
+const printBookInfo = function ({ title, author, year = 'year unknown' }) {
     console.log(`"${title} by ${author}, ${year}"`);
-}
+};
 
-printBookInfo({ title: 'Algorithms', author: 'Robert Sedgewick', year: '2011' });
+printBookInfo({
+    title: 'Algorithms',
+    author: 'Robert Sedgewick',
+    year: '2011',
+});
 printBookInfo({ title: 'Algorithms', author: 'Robert Sedgewick' });
+
+console.log('SECTION 3');
+
+//3.1
+const bookAuthors = [...books[0].author, ...books[1].author];
+console.log(bookAuthors);
+
+//3.2
+const spellWord = function (givenString) {
+    console.log(...givenString);
+};
+spellWord('JavaScript');

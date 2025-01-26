@@ -341,3 +341,16 @@ const printBookAuthorsCount = function (title, ...authors) {
     console.log(`"The book "${title}" has ${authors.length} authors`);
 };
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
+
+console.log('SECTION 5');
+
+//5.1
+const hasExamplesInJava = function (books) {
+    return book.programmingLanguage === 'Java' || 'no data available';
+};
+
+//5.2
+for (let i = 0; i < books.length; i++) {
+    books[i].onlineContent &&
+        console.log(`"${books[i].title}" provides online content`);
+}

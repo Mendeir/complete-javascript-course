@@ -455,5 +455,32 @@ const printGoals = function (...playerNames) {
     console.log(`Total number of goals: ${playerNames.length}`);
 };
 
-team1 < team2 && console.log("Team 1 more likely to win")
-team1 > team2 && console.log("Team 2 more likely to win")
+team1 < team2 && console.log('Team 1 more likely to win');
+team1 > team2 && console.log('Team 2 more likely to win');
+
+console.log('SECTION 8');
+//8.1
+let pageSum = 0;
+
+for (const book of books) {
+    pageSum += book.pages;
+}
+console.log(pageSum);
+
+//8.2
+const allAuthors = [];
+for (const book of books) {
+    if (typeof book.author === 'string') {
+        allAuthors.push(book.author);
+    } else {
+        for (const author of book.author) {
+            allAuthors.push(author);
+        }
+    }
+}
+console.log(allAuthors);
+
+//8.3
+for (const [index, author] of allAuthors.entries()) {
+    console.log(`${index + 1}: ${author}`);
+}

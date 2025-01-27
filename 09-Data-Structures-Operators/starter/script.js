@@ -595,3 +595,33 @@ for (const player of game.scored) {
     scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
 console.log(scorers);
+
+console.log('SECTION 12');
+//12.1
+const allKeywords = [];
+
+for (const book of books) {
+    allKeywords.push(...book.keywords);
+}
+console.log(allKeywords);
+
+//12.2
+const uniqueKeywords = new Set(allKeywords);
+console.log(uniqueKeywords);
+
+//12.3
+uniqueKeywords.add('coding');
+uniqueKeywords.add('science');
+console.log(uniqueKeywords);
+
+//12.4
+uniqueKeywords.delete('business');
+console.log(uniqueKeywords);
+
+//12.5
+const uniqueKeywordsArr = [...uniqueKeywords];
+console.log(uniqueKeywordsArr);
+
+//12.6
+uniqueKeywords.clear();
+console.log(uniqueKeywords);

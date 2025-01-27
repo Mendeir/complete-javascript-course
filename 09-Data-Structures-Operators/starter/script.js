@@ -518,3 +518,28 @@ const getFirstKeyword = function (book) {
 
 getFirstKeyword(books[0]);
 getFirstKeyword(newBook2); // from previous tasks
+
+console.log('SECTION 11');
+//11.1
+const entries = [];
+
+for (const entry of Object.keys(books[0].thirdParty.goodreads)) {
+    entries.push([entry]);
+}
+console.log(entries);
+
+//11.2
+for (const [index, value] of Object.values(
+    books[0].thirdParty.goodreads,
+).entries()) {
+    entries[index].push(value);
+}
+console.log(entries);
+
+//11.3
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+console.log(entries2);
+
+//11.4
+console.log(entries);
+console.log(entries2);

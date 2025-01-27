@@ -509,3 +509,12 @@ const newBook2 = {
     pages,
 };
 console.log(newBook2);
+
+console.log('SECTION 10');
+//10.1
+const getFirstKeyword = function (book) {
+    console.log(book.keywords?.[0]);
+};
+
+getFirstKeyword(books[0]);
+getFirstKeyword(newBook2); // from previous tasks

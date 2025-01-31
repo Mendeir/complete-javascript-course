@@ -726,3 +726,44 @@ function isContributor(author) {
     return author.lastIndexOf('(Contributor)') !== -1;
 }
 console.log(isContributor('Julie Sussman (Contributor)'));
+
+console.log('SECTION 16');
+//16.1
+const normalizeAuthorName = function (authorName) {
+    if (authorName.includes('(Contributor)')) {
+        authorName = authorName.replace('(Contributor)', '');
+    }
+
+    authorName = authorName.trim().toLowerCase();
+
+    const nameParts = authorName.split(' ');
+
+    const capitalizedParts = nameParts.map(
+        part => part.charAt(0).toUpperCase() + part.slice(1),
+    );
+
+    return capitalizedParts.join(' ');
+};
+console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
+
+//16.2
+const newBookTitle = books[1].title.replace('Programs', 'Software');
+console.log(newBookTitle);
+
+//16.3
+const logBookTheme = function (title) {
+    title = title.toLowerCase();
+
+    if (title.startsWith('computer')) {
+        console.log('This book is about computers');
+    } else if (title.includes('algorithms') && title.includes('structures')) {
+        console.log('This book is about algorithms and data structures');
+    } else if (
+        (title.endsWith('system') || title.endsWith('systems')) &&
+        !title.includes('operating')
+    ) {
+        console.log(
+            'This book is about some systems, but definitely not about operating systems',
+        );
+    }
+};

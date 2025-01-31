@@ -703,3 +703,26 @@ const logGameEvents = function (value, key, map) {
     console.log(str);
 };
 gameEvents.forEach(logGameEvents);
+
+console.log('SECTION 15');
+
+//15.1
+console.log(
+    books[0].ISBN['6'],
+    books[0].ISBN['4'],
+    books[0].ISBN['9'],
+    books[0].ISBN[8],
+);
+//15.2
+const quote =
+    'A computer once beat me at chess, but it was no match for me at kick boxing';
+console.log(quote.indexOf('chess'));
+
+//15.3
+console.log(quote.slice(quote.lastIndexOf(' ') + 1));
+
+//15.4
+function isContributor(author) {
+    return author.lastIndexOf('(Contributor)') !== -1;
+}
+console.log(isContributor('Julie Sussman (Contributor)'));

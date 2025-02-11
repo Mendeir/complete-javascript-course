@@ -49,6 +49,9 @@ const account2 = {
     locale: 'en-US',
 };
 
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
 const accounts = [account1, account2];
 
 /////////////////////////////////////////////////
@@ -154,6 +157,10 @@ const updateUI = function (acc) {
 ///////////////////////////////////////
 // Event handlers
 let currentAccount;
+
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
 
 btnLogin.addEventListener('click', function (e) {
     // Prevent form from submitting
